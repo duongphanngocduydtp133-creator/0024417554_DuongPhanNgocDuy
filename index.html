@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EduHub Web - Sự kiện sắp diễn ra</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">EduHub Web</a>
+      <nav aria-label="Điều hướng chính">
+        <ul class="nav-list">
+          <li><a href="index.html">Trang chủ</a></li>
+          <li><a href="#event-list">Sự kiện</a></li>
+          <li><a href="#register">Đăng ký</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>Sự kiện sắp diễn ra</h1>
+
+    <form id="search-form" class="search-form">
+      <label for="keyword">Tìm kiếm sự kiện</label>
+      <div class="search-controls">
+        <input
+          type="search"
+          id="keyword"
+          name="keyword"
+          placeholder="Tìm sự kiện..."
+        />
+        <button type="submit">Tìm</button>
+      </div>
+    </form>
+
+    <p id="status" role="status" aria-live="polite"></p>
+
+    <div id="event-list" class="event-grid">
+      <!-- Card mẫu 1 -->
+      <article class="event-card">
+        <img
+          src="img/event.svg"
+          alt="Minh họa Workshop Git & GitHub cho tân sinh viên"
+        />
+        <div class="event-body">
+          <h2 class="event-title">
+            <a href="event-detail.html?id=1">
+              Workshop Git &amp; GitHub cho tân sinh viên
+            </a>
+          </h2>
+          <p class="event-meta">
+            Thời gian:
+            <time datetime="2026-09-12T08:00:00">08:00, 12/09/2026</time>
+          </p>
+          <p class="event-meta">Địa điểm: Phòng máy A3.201</p>
+          <p class="event-seats">Còn 12/40 chỗ</p>
+        </div>
+      </article>
+
+      <!-- Card mẫu 2 (Hết chỗ) -->
+      <article class="event-card">
+        <img
+          src="img/event.svg"
+          alt="Minh họa Hackathon EduHub 24 giờ"
+        />
+        <div class="event-body">
+          <h2 class="event-title">
+            <a href="event-detail.html?id=2">Hackathon EduHub 24 giờ</a>
+          </h2>
+          <p class="event-meta">
+            Thời gian:
+            <time datetime="2026-12-19T08:00:00">08:00, 19/12/2026</time>
+          </p>
+          <p class="event-meta">Địa điểm: Phòng máy A3.205</p>
+          <p class="event-seats">
+            <span class="badge-full">Hết chỗ</span>
+          </p>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 EduHub Web</p>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
